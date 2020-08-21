@@ -6,6 +6,8 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
 
 
 # - create:
