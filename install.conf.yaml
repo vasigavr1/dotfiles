@@ -8,6 +8,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
+    ~/.ssh/config: ssh-config
 
 
 # - create:

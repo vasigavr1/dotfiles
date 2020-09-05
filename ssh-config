@@ -1,0 +1,31 @@
+Host vm1
+    User dev
+    HostName  192.168.122.11
+    IdentityFile ~/.ssh/id_rsa_RDMA
+
+Host vm2
+    User dev
+    HostName  192.168.122.12
+    IdentityFile ~/.ssh/id_rsa_RDMA
+
+Host vm3
+    User dev
+    HostName  192.168.122.13
+    IdentityFile ~/.ssh/id_rsa_RDMA
+
+
+Host forum
+    User s1687259
+    HostName ssh.inf.ed.ac.uk
+    IdentityFile ~/.ssh/id_ed25519
+
+Host houston-tun
+	ProxyJump forum
+	HostName houston
+	User s1687259
+
+Host staff DICE
+    ProxyJump forum
+    User s1687259
+    HostName  staff.compute.inf.ed.ac.uk
+
