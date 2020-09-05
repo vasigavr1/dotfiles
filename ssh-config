@@ -17,7 +17,7 @@ Host vm3
 Host forum
     User s1687259
     HostName ssh.inf.ed.ac.uk
-    IdentityFile ~/.ssh/id_ed25519
+    
 
 Host houston-tun
 	ProxyJump forum
@@ -28,4 +28,3 @@ Host staff DICE
     ProxyJump forum
     User s1687259
     HostName  staff.compute.inf.ed.ac.uk
-
