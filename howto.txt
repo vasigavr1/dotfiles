@@ -1,0 +1,7 @@
+
+# Merge two bib files
+bibtool --preserve.key.case=on --print.deleted.entries=off -s -d references.bib thesis.bib -o new_bib.bib
+
+# Two useful links
+https://github.com/vasigavr1/Odyssey/blob/master/bin/config.sh
+https://github.com/vasigavr1/Odyssey/blob/master/bin/Error%20log.md

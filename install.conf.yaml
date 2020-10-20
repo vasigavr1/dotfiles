@@ -9,6 +9,7 @@
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.ssh/config: ssh-config
+    # ~/Documents/houston/.bashrc: houston_bashrc ## this does not work on houston's side: houston sees the link but not the actual file
 
 
 # - create:
