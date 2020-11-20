@@ -201,3 +201,4 @@ alias copy_and_ssh_to_dice='/home/vasilis/Documents/print-scripts/copy-to-dice.s
 alias git-log='git log --all --graph --decorate --oneline'
 # SSH
 alias sshfs-houston='~/dotfiles/bin/create_houston_sshfs.sh'
+alias git-push-all='~/dotfiles/bin/git-push-all.sh'
