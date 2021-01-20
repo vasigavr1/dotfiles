@@ -16,7 +16,7 @@ Host vm3
 
 Host forum
     User s1687259
-    HostName ssh.inf.ed.ac.uk
+    HostName staff.ssh.inf.ed.ac.uk
     
 
 Host houston-tun
