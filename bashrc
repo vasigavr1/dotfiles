@@ -197,9 +197,9 @@ alias gdb-cr='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/craq'
 alias gdb-cht='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/cht'
 alias gdb-cp='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/paxos'
 
-alias latency-parser=$ODYSSEY_BIN_DIR/csv_latency_parser.py
+alias latency-parser='$ODYSSEY_BIN_DIR/csv_latency_parser.py'
 
-alias run-od='$ODYSSEY_BIN_DIR/run-exe.sh"
+alias run-od='$ODYSSEY_BIN_DIR/run-exe.sh'
 alias run-zk='$ODYSSEY_BIN_DIR/run-exe.sh -x zookeeper'
 alias run-kite='$ODYSSEY_BIN_DIR/run-exe.sh -x kite'
 alias run-cp='$ODYSSEY_BIN_DIR/run-exe.sh -x paxos'
@@ -213,8 +213,8 @@ alias copy-run-hr='$ODYSSEY_BIN_DIR/copy-run.sh -x hermes'
 alias copy-run-cht='$ODYSSEY_BIN_DIR/copy-run.sh -x cht'
 alias copy-run-cr='$ODYSSEY_BIN_DIR/copy-run.sh -x craq'
 
-alias push-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-push.sh
-alias pull-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-pull.sh
-alias status-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-status.sh
-alias diff-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-diff.sh
-alias perf-top=$ODYSSEY_BIN_DIR/perf-top.sh
+alias push-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-push.sh'
+alias pull-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-pull.sh'
+alias status-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-status.sh'
+alias diff-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-diff.sh'
+alias perf-top='$ODYSSEY_BIN_DIR/perf-top.sh'
