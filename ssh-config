@@ -1,3 +1,5 @@
+Include cloudlab_ssh_config
+ 
 Host vm1
     User dev
     HostName  192.168.122.11

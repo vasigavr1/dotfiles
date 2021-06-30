@@ -165,40 +165,56 @@ fi
 }
 
 
-export PS1="\[\033[36m\]\u\[\033[0;31m\]$(parse_git_branch)\[\033[m\]@\[\033[32m\]\h:\[\033[33;2m\]\w\[\033[m\]$"
-export PATH=/home/vasilis/local/murphi/cmurphi/src:$PATH
 
-export GROMACS_PATH=/home/vasilis/Documents/CAR/assignment1/benchmarks/435.gromacs/run_base_ref_amd64-m64-gcc41-nn.0000
-export GOBMK_PATH=/home/vasilis/Documents/CAR/assignment1/benchmarks/445.gobmk/run_base_ref_amd64-m64-gcc41-nn.0000
-export SJENG_PATH=/home/vasilis/Documents/CAR/assignment1/benchmarks/458.sjeng/run_base_ref_amd64-m64-gcc41-nn.0000
-export BP_EXAMPLE=/home/vasilis/Documents/CAR/assignment1/tools/pin-3.5-97503-gac534ca30-gcc-linux/source/tools/BPExample
-export CAR=/home/vasilis/Documents/CAR/
-
-export PREF_EXAMPLE=/home/vasilis/Documents/CAR/assignment2/new_assignment2/tools/pin-3.5-97503-gac534ca30-gcc-linux/source/tools/PrefetchExample
 #Tmux
 alias tmux='tmux -2'
 #Script appended commands'
-alias output-check='/home/vasilis/Documents/inf2cs/marking-inf2cs/vasilis/bin/output-check.sh'
-alias move-student='/home/vasilis/Documents/inf2cs/marking-inf2cs/vasilis/bin/move-student.sh'
-alias next-student='source /home/vasilis/Documents/inf2cs/marking-inf2cs/vasilis/bin/next-student.sh'
-alias run-student='source /home/vasilis/Downloads/run_students.sh'
-#Script appended commands'
-alias open-pdf='/home/vasilis/Documents/CAR/assignment1/open-pdf.sh'
-alias open-cpp='/home/vasilis/Documents/CAR/assignment1/open-cpp.sh'
-alias output-check='/home/vasilis/Documents/CAR/assignment1/output-check.sh'
-alias move-student='/home/vasilis/Documents/CAR/assignment1/move-student.sh'
-alias next-student='source /home/vasilis/Documents/CAR/assignment1/next-student.sh'
-#Script appended commands'
-alias open-pdf='/home/vasilis/Documents/CAR/bin/open-pdf.sh'
-alias open-cpp='/home/vasilis/Documents/CAR/bin/open-cpp.sh'
-alias output-check='/home/vasilis/Documents/CAR/bin/output-check.sh'
-alias move-student='/home/vasilis/Documents/CAR/bin/move-student.sh'
-alias next-student='source /home/vasilis/Documents/CAR/bin/next-student.sh'
-
-#Printing
-alias copy_and_ssh_to_dice='/home/vasilis/Documents/print-scripts/copy-to-dice.sh'
+export PS1="\[\033[36m\]\u\[\033[0;31m\]$(parse_git_branch)\[\033[m\]@\[\033[32m\]\h:\[\033[33;2m\]\w\[\033[m\]$"
 #Git
 alias git-log='git log --all --graph --decorate --oneline'
+alias git-push-all='~/dotfiles/bin/git-push-all.sh'
 # SSH
 alias sshfs-houston='~/dotfiles/bin/create_houston_sshfs.sh'
-alias git-push-all='~/dotfiles/bin/git-push-all.sh'
+alias sshfs-cloudlab='~/dotfiles/bin/create_cloudlab_sshfs.sh'
+# GDB
+ulimit -c unlimited
+#PCIe
+alias pcie-counters='sudo /home/user/pcm/pcm-pcie.x -B'
+#RDMA
+alias sm-start='sudo /etc/init.d/opensmd start'
+alias nic-perf='sudo watch -n1 perfquery -x -r'
+alias out_of_buffer="cat /sys/class/infiniband/mlx5_0/ports/1/hw_counters/out_of_buffer"
+alias rdma-counters='~/dotfiles/bin/rdma_hw_counters.sh'
+
+
+ODYSSEY_BUILD_DIR='~/odyssey/build'
+ODYSSEY_BIN_DIR='~/odyssey/bin'
+alias gdb-kite='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/kite'
+alias gdb-zk='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/zookeeper'
+alias gdb-dr='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/derecho'
+alias gdb-hr='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/hermes'
+alias gdb-cr='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/craq'
+alias gdb-cht='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/cht'
+alias gdb-cp='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/paxos'
+
+alias latency-parser=$ODYSSEY_BIN_DIR/csv_latency_parser.py
+
+alias run-od='$ODYSSEY_BIN_DIR/run-exe.sh"
+alias run-zk='$ODYSSEY_BIN_DIR/run-exe.sh -x zookeeper'
+alias run-kite='$ODYSSEY_BIN_DIR/run-exe.sh -x kite'
+alias run-cp='$ODYSSEY_BIN_DIR/run-exe.sh -x paxos'
+
+alias copy-run-zk='$ODYSSEY_BIN_DIR/copy-run.sh -x zookeeper'
+alias copy-run-zk-perf='$ODYSSEY_BIN_DIR/copy-run.sh zk-perf'
+alias copy-run-kite='$ODYSSEY_BIN_DIR/copy-run.sh -x kite'
+alias copy-run-paxos='$ODYSSEY_BIN_DIR/copy-run.sh -x paxos'
+alias copy-run-dr='$ODYSSEY_BIN_DIR/copy-run.sh -x derecho'
+alias copy-run-hr='$ODYSSEY_BIN_DIR/copy-run.sh -x hermes'
+alias copy-run-cht='$ODYSSEY_BIN_DIR/copy-run.sh -x cht'
+alias copy-run-cr='$ODYSSEY_BIN_DIR/copy-run.sh -x craq'
+
+alias push-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-push.sh
+alias pull-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-pull.sh
+alias status-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-status.sh
+alias diff-all-odyssey=$ODYSSEY_BIN_DIR/git-scripts/git-all-diff.sh
+alias perf-top=$ODYSSEY_BIN_DIR/perf-top.sh
