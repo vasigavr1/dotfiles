@@ -179,7 +179,7 @@ alias sshfs-cloudlab='~/dotfiles/bin/create_cloudlab_sshfs.sh'
 # GDB
 ulimit -c unlimited
 #PCIe
-alias pcie-counters='sudo /home/user/pcm/pcm-pcie.x -B'
+alias pcie-counters='sudo $HOME/pcm/pcm-pcie.x -B'
 #RDMA
 alias sm-start='sudo /etc/init.d/opensmd start'
 alias nic-perf='sudo watch -n1 perfquery -x -r'
@@ -187,8 +187,8 @@ alias out_of_buffer="cat /sys/class/infiniband/mlx5_0/ports/1/hw_counters/out_of
 alias rdma-counters='~/dotfiles/bin/rdma_hw_counters.sh'
 
 
-ODYSSEY_BUILD_DIR='~/odyssey/build'
-ODYSSEY_BIN_DIR='~/odyssey/bin'
+ODYSSEY_BUILD_DIR='$HOME/odyssey/build'
+ODYSSEY_BIN_DIR='$HOME/odyssey/bin'
 alias gdb-kite='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/kite'
 alias gdb-zk='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/zookeeper'
 alias gdb-dr='sudo gdb -c $ODYSSEY_BUILD_DIR/core $ODYSSEY_BUILD_DIR/derecho'
