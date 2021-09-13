@@ -165,6 +165,13 @@ fi
 }
 
 
+# Adding the password of the ssh key to the password manager
+#eval "$(ssh-agent -s)"
+#ssh-add ~/.ssh/id_ed25519
+
+
+export WIN_HOME=/mnt/c/Users/v84201119/
+
 
 #Tmux
 alias tmux='tmux -2'
