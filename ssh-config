@@ -1,4 +1,7 @@
 Include cloudlab_ssh_config
+Host semedi
+    User vasilis
+    HostName 10.204.236.216
  
 Host vm1
     User dev
