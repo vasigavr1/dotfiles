@@ -1,3 +1,11 @@
 [user]
-	email = vasigavr1@gmail.com
-	name = vasilis gavrielatos
+	email = vasilis.gavrielatos@huawei.com
+	name = Vasilis Gavrielatos
+[https]
+	proxy = https://127.0.0.1:3128
+[http]
+	proxy = http://127.0.0.1:3128
+	sslVerify = false
+	sslCAInfo = C:
+[url "https://"]
+	insteadOf = git://

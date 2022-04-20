@@ -170,13 +170,22 @@ fi
 #ssh-add ~/.ssh/id_ed25519
 
 
-export WIN_HOME=/mnt/c/Users/v84201119/
+export WIN_HOME=/mnt/c/Users/v00633752
+export DNL=/home/vasigavr1/Documents/git-projects/dandelion
 
-
+export http_proxy=http://127.0.0.1:3128
+export https_proxy=http://127.0.0.1:3128
+alias ls='ls --color=auto'
+export PATH=$PATH:/home/$USER/.local/bin
 #Tmux
 alias tmux='tmux -2'
 #Script appended commands'
 export PS1="\[\033[36m\]\u\[\033[0;31m\]$(parse_git_branch)\[\033[m\]@\[\033[32m\]\h:\[\033[33;2m\]\w\[\033[m\]$"
+parse_git_branch() { 
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/{\1}/'
+}
+export PS1="\[\e[95m\]\u\[\e[0;31m\]\$(parse_git_branch)\[\e[m\]@\[\e[32m\]\h\e[0m:\[\e[0;36;49m\]\w\[\e[m\]$ \n" 
+
 #Git
 alias git-log='git log --all --graph --decorate --oneline'
 alias git-push-all='~/dotfiles/bin/git-push-all.sh'
@@ -190,6 +199,7 @@ alias pcie-counters='sudo $HOME/pcm/pcm-pcie.x -B'
 #RDMA
 alias sm-start='sudo /etc/init.d/opensmd start'
 alias nic-perf='sudo watch -n1 perfquery -x -r'
+alias huge-pages='watch -n1 "cat /proc/meminfo | grep Huge"'
 alias out_of_buffer="cat /sys/class/infiniband/mlx5_0/ports/1/hw_counters/out_of_buffer"
 alias rdma-counters='~/dotfiles/bin/rdma_hw_counters.sh'
 
@@ -225,3 +235,5 @@ alias pull-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-pull.sh'
 alias status-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-status.sh'
 alias diff-all-odyssey='$ODYSSEY_BIN_DIR/git-scripts/git-all-diff.sh'
 alias perf-top='$ODYSSEY_BIN_DIR/perf-top.sh'
+
+cd $DNL
