@@ -15,6 +15,15 @@ Host r3
    User vasilis
    HostName 10.204.236.220
 
+Host r4
+   User vasilis
+   HostName 10.204.236.236
+
+Host r5
+   User vasilis
+   HostName 10.204.236.237
+
+
 Host vm1
     User dev
     HostName  192.168.122.11
