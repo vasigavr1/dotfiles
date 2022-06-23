@@ -3,6 +3,10 @@ Host semedi
     User vasilis
     HostName 10.204.236.216
 
+Host r0
+   User vasilis
+   HostName 10.204.236.239
+
 Host r1
    User vasilis
    HostName 10.204.236.218
@@ -22,6 +26,14 @@ Host r4
 Host r5
    User vasilis
    HostName 10.204.236.237
+
+Host r6
+   User vasilis
+   HostName 10.204.236.240
+
+Host r7
+   User vasilis
+   HostName 10.204.236.241
 
 
 Host vm1
